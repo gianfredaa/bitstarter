@@ -4,6 +4,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
   //response.send('Hello World Ante 123!');
+  var fs = require('fs');
   var buffer = fs.readFileSync('index.html').toString();
   response.send(buffer);
 });
